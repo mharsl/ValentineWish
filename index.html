@@ -1,17 +1,35 @@
+HTML dosyanın `<head>` bölümünde, "stylesheet" linklerini ve diğer meta etiketlerini doğru şekilde kullanmışsın. Ancak, Open Graph meta etiketlerini ve açıklamalarını eklemek için bazı değişiklikler yapabilirsin. İşte eksik olabilecek Open Graph etiketleri ile güncellenmiş `<head>` bölümü:
+
+### Güncellenmiş `<head>` Bölümü
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
     <title>SÜRPRİZ :)</title>
-    <link
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SÜRPRİZ :)">
+    <meta property="og:description" content="Bu bir sürpriz web sayfası. Merakını gider Ela!">
+    <meta property="og:image" content="https://r.resimlink.com/tRP-9sgNAzm.jpeg">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+    <!-- İçerik buraya gelecek -->
+  </body>
+</html>
+```
+  
   <body>
     <div class="container">
       <div class="one">
