@@ -255,23 +255,15 @@ const animationTimeline = () => {
       y: 30,
       zIndex: "-1",
     })
-window.onload = function() {
-    // Paragrafı sayfanın en üstüne taşı
-    var paragraph = document.querySelector('.nine p');
-    paragraph.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Animasyonları başlat
-    gsap.timeline()
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
-        ".last-smile",
-        0.5,
-        {
-            rotation: 90,
-        },
-        "+=1"
+      ".last-smile",
+      0.5,
+      {
+        rotation: 90,
+      },
+      "+=1"
     );
-};
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
