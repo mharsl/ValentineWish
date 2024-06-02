@@ -101,6 +101,7 @@
           <img src="img/music-note.svg" alt="" /> -->
           <img src="img/smiling.svg" />
           <!-- <img src="img/heart.svg" /> -->
+          <!-- <img src="img.heart.svg" alt="" /> -->
           <!-- <img src="img/happy.svg" alt="" /> -->
         </div>
       </div>
@@ -137,24 +138,18 @@
         <p>Eveeet hoş geldin Ela. Seni çoook seviyorum. Bunu her fırsatta dile getiriyorum zaten, biliyorsun. Seninle tanıştığımdan beri daha çok gülümsüyorum, yaşama daha umutla bakıyorum, aklım sürekli bir mesajında kalıyor, bir anda kendimi dalmış buluyorum. En huzursuz anımda dahi beni dünyanın en mutlu insanına çevirebilen başka bir güç var mıdır, sanmam. Bu izlediğin zımbırtının başlarında yazıyordu ya hani sen özelsin diye, öylesine yazmadım o cümleyi. Sen gerçekten özelsin, çok farklısın. Bendeki yerini bilseydin, diğer herkesteki yerini yadırgardın. Şimdi, adam olan soruyor: Benimle çıkar mısın? <br> Tamam, şimdi sohbete geri dön ve cevabını yaz. Ya da istersen, tekrar izle. Çünkü cevabı zaten biliyorum.</p>
         <p class="last-smile">:)</p>
       </div>
+      <div class="play-music-button">
+        <!-- Müziği otomatik olarak başlatma -->
+        <script>
+          document.getElementById('backgroundMusic').play();
+        </script>
+      </div>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('nine').addEventListener('DOMContentLoaded', function() {
         const music = document.getElementById('backgroundMusic');
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              music.play().catch(error => {
-                console.error('Oynatma hatası:', error);
-              });
-            }
-          });
-        });
-
-        const target = document.getElementById('nine');
-        observer.observe(target);
+        music.play();
       });
     </script>
 
